@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>El tiempo</h1>
+    <p><b>Fecha: </b>{{ monday.date }}</p>
+    <p><b>Temperatura Max: </b> {{ monday.getTemperatureMax() }} ºC</p>
+    <p><b>Temperatura Min: </b> {{ monday.getTemperatureMin() }} ºC</p>
+    <p><b>Estado: </b>{{ monday.text}}</p>
+    <p><b>Viento: </b>{{ monday.wind }} km/h</p>
+    <p><b>Direccion del viento: </b> {{ monday.getWindDirection() }}</p>
+    <p><b>Salida del Sol: </b> {{ monday.sunrise }}</p>
+    <p><b>Puesta del Sol: </b> {{ monday.sunset }}</p>
+    <p><b>Salida de la luna: </b> {{ monday.moonrise }}</p>
+    <p><b>Puesta de la luna: </b> {{ monday.moonset }}</p>
+{% endblock body %}
